@@ -1094,6 +1094,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 
 [[package]]
+name = "memmap2"
+version = "0.9.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd3f7eed9d3848f8b98834af67102b720745c4ec028fcd0aa0239277e7de374f"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "memoffset"
 version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1322,15 +1331,6 @@ name = "pool"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c7ac1531a0016945992b4e816e81538dfad0b9f00d280bcb707d711839f1536d"
-
-[[package]]
-name = "poule"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5830f93d0d012c17fecbc00e7dbe3aa02e36fb97357fdec37bff6d6b5d729273"
-dependencies = [
- "libc",
-]
 
 [[package]]
 name = "powerfmt"
@@ -1848,7 +1848,6 @@ dependencies = [
  "nix",
  "nom",
  "pool",
- "poule",
  "prettytable-rs",
  "prost",
  "prost-build",
@@ -1893,9 +1892,9 @@ dependencies = [
  "kawa",
  "libc",
  "memchr",
+ "memmap2",
  "mio",
  "nom",
- "poule",
  "quickcheck",
  "rand",
  "regex",
@@ -1908,7 +1907,6 @@ dependencies = [
  "socket2",
  "sozu-command-lib",
  "thiserror 2.0.3",
- "time",
  "tiny_http",
 ]
 

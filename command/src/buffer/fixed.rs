@@ -4,8 +4,6 @@ use std::{
     ptr,
 };
 
-use poule::Reset;
-
 #[derive(Debug, PartialEq, Eq, Clone, Default)]
 pub struct BufferMetadata {
     position: usize,
@@ -233,12 +231,6 @@ impl Read for Buffer {
             self.inner.position += len;
         }
         Ok(len)
-    }
-}
-
-impl Reset for Buffer {
-    fn reset(&mut self) {
-        self.reset();
     }
 }
 
